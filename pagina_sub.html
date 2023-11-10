@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Páginas de simulados</title>
+  </head>
+  <style>
+    #mensagem {
+      width: 500px;
+      height: 50px;
+      border: 5px solid blue;
+      border-radius: 20px;
+    }
+    fieldset {
+      width: 150px;
+      height: 20px;
+      border: 2px solid black;
+      background-color: aqua;
+    }
+    img {
+      width: 1900px;
+      height: 100px;
+    }
+
+    figure {
+      width: 1900px;
+      height: 100px;
+    }
+  </style>
+  <body>
+    <center>
+      <h1 id="mensagem">Olá! Hoje tem avaliação!</h1>
+
+      <br />
+      <form>
+        <input
+          type="button"
+          value="CLIQUE AQUI"
+          onClick="alert('Bem vindo'); return true"
+        />
+      </form>
+      <br /><br /><br />
+
+      <button onclick="inicio()">Clique para começar</button>
+    </center>
+  </body>
+  <script>
+    function inicio() {
+      let nome = window.prompt("Qual é o seu nome?");
+      window.alert(`Olá, ${nome}! Bora começar ?`);
+    }
+  </script>
+  <br /><br /><br />
+  <script>
+    document.getElementById("mensagem").innerHTML = "Olá! Hoje tem avaliação!";
+  </script>
+  <hr />
+  <center>
+    <h2>Trabalhando com números</h2>
+    <button onclick="calcular()">Clique para calcular</button>
+    <section id="res">
+      <p>O dobro de 0 é 0 e a metade é 0!</p>
+    </section>
+    <script>
+      function calcular() {
+        let num = Number(window.prompt("Digite um número:"));
+        let dobro = num * 2;
+        let metade = num / 2;
+        res.innerHTML = `<p>O dobro de ${num} é ${dobro} e a metade é ${metade}!</p>`;
+      }
+    </script>
+  </center>
+  <hr />
+  <img src="cobra.jpg" />
+  <center>
+    <h2>Média do aluno</h2>
+    <button onclick="media()">Calcular média</button>
+    <section id="situacao">
+      <p>Sua melhor Nota foi</p>
+    </section>
+  </center>
+  <center>
+    <fieldset>
+      <a href="file:///D:/prova%20novembro/provanov.html">
+        Voltar a página inicial</a
+      >
+    </fieldset>
+  </center>
+
+  <script src="script.js"></script>
+</html>
